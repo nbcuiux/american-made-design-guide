@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+'Futurizr': {
+'hasTouch': 'touch'
+}
+}">
+<head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="lib/google.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Pages - Video Gallery - American Made Design Guide | UBC UX Labs</title>
+
+</head>
+
+<body class="site-material_ext_publish section-animation first-chapter color-red qp-ui" data-qp-ui="{ 'Mask': {} }">
+  <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+  'mobile': 72,
+  'desktop-sm': 72,
+  'default': 192
+}
+}">
+<div class="header-wrapper qp-ui" data-qp-ui="{
+'Peekaboo': {
+'mobile': 28,
+'desktop-sm': 28,
+'default': 82
+}
+}">
+<div class="header-title">
+    <span class="section-title">Pages</span>
+    <span class="chapter-title"><span class="title-separator">—</span>
+    Video Gallery
+</span>
+</div>
+</div>
+
+</header>
+
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab"><i class="material-icons material-spec-icon" title="Show navigation">menu</i></button>
+</nav>
+
+//= template/menu.html
+
+<div id="grid-cont">
+
+    <section class="grid_outer chapter">
+        <h1 class="chapter-title">Video Gallery</h1>
+
+        <div class="chapter-content">
+
+            <div class="chapter-intro">
+                <p>Videos can be used to add more of an immersive feel to the site. Layout and interactions with videos players and galleries directly shape how the user interacts with that content.</p>
+            </div>
+
+            <nav class="chapter-toc">
+                <h1>Contents</h1>
+                <ul>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#tiled" data-hover="Tiled Gallery">Tiled Gallery</a></li>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#trailers" data-hover="Split Trailers">Split Trailers</a></li>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#beauty-and-the-beast" data-hover="Interactive 360 Video">Interactive 360 Video</a></li>
+                </ul>
+            </nav>
+
+            <div class="article-list">
+                <div id="tiled" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Tiled Gallery</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>We decided to prototype our own Video Gallery to showcase exactly what we were thinking from an interaction standpoint. Inspired by <a href="http://www.hellorhighwater.movie/">www.hellorhighwater.movie/</a></p>
+                                    </div>
+                                </section>
+
+                                <section class="moduleC1 moduleC1-video-gallery">
+                                    <div class="module-body">
+                                     <div class="figure-group">
+                                      <div class="figure-row">
+                                        <figure>
+                                            <div class="video-item" onmouseover="Play1()" onmouseout="Pause1()" onClick="clicker1()">
+                                                <div class="video-border"></div>
+                                                <div class="legend">
+                                                    <h3 class="legend-text">Trailer 1</h3>
+                                                </div>
+                                                <div class="video-btn-out" style="background-image: url('img/gallery/full-btn.svg');"></div>
+                                                <div class="video-btn-over">
+                                                    <div class="video-arrow" style="background-image: url('img/gallery/btn-arrow.svg');"></div>
+                                                </div>
+                                                <video video id="video1"><source src="img/gallery/1.mp4" type="video/mp4"></video>
+                                            </div>
+                                        </figure>
+                                        <figure>
+                                            <div class="video-item" onmouseover="Play2()" onmouseout="Pause2()" onClick="clicker2()">
+                                                <div class="video-border"></div>
+                                                <div class="legend">
+                                                    <h3 class="legend-text">Trailer 2</h3>
+                                                </div>
+                                                <div class="video-btn-out" style="background-image: url('img/gallery/full-btn.svg');"></div>
+                                                <div class="video-btn-over">
+                                                    <div class="video-arrow" style="background-image: url('img/gallery/btn-arrow.svg');"></div>
+                                                </div>
+                                                <video video id="video2"><source src="img/gallery/4.mp4" type="video/mp4"></video>
+                                            </div>
+                                        </figure>
+                                        <figure>
+                                            <div class="video-item" onmouseover="Play3()" onmouseout="Pause3()" onClick="clicker3()">
+                                                <div class="video-border"></div>
+                                                <div class="legend">
+                                                    <h3 class="legend-text">Trailer 3</h3>
+                                                </div>
+                                                <div class="video-btn-out" style="background-image: url('img/gallery/full-btn.svg');"></div>
+                                                <div class="video-btn-over">
+                                                    <div class="video-arrow" style="background-image: url('img/gallery/btn-arrow.svg');"></div>
+                                                </div>
+                                                <video video id="video3"><source src="img/gallery/3.mp4" type="video/mp4"></video>
+                                            </div>
+                                        </figure>
+                                        <figure>
+                                            <div class="video-item" onmouseover="Play4()" onmouseout="Pause4()" onClick="clicker4()">
+                                                <div class="video-border"></div>
+                                                <div class="legend">
+                                                    <h3 class="legend-text">Trailer 4</h3>
+                                                </div>
+                                                <div class="video-btn-out" style="background-image: url('img/gallery/full-btn.svg');"></div>
+                                                <div class="video-btn-over">
+                                                    <div class="video-arrow" style="background-image: url('img/gallery/btn-arrow.svg');"></div>
+                                                </div>
+                                                <video video id="video4"><source src="img/gallery/9.mp4" type="video/mp4"></video>
+                                            </div>
+                                        </figure>
+                                        <figure>
+                                            <div class="video-item" onmouseover="Play5()" onmouseout="Pause5()" onClick="clicker5()">
+                                                <div class="video-border"></div>
+                                                <div class="legend">
+                                                    <h3 class="legend-text">Trailer 5</h3>
+                                                </div>
+                                                <div class="video-btn-out" style="background-image: url('img/gallery/full-btn.svg');"></div>
+                                                <div class="video-btn-over">
+                                                    <div class="video-arrow" style="background-image: url('img/gallery/btn-arrow.svg');"></div>
+                                                </div>
+                                                <video video id="video5"><source src="img/gallery/7.mp4" type="video/mp4"></video>
+                                            </div>
+                                        </figure>
+                                        <figure>
+                                            <div class="video-item" onmouseover="Play6()" onmouseout="Pause6()" onClick="clicker6()">
+                                                <div class="video-border"></div>
+                                                <div class="legend">
+                                                    <h3 class="legend-text">Trailer 6</h3>
+                                                </div>
+                                                <div class="video-btn-out" style="background-image: url('img/gallery/full-btn.svg');"></div>
+                                                <div class="video-btn-over">
+                                                    <div class="video-arrow" style="background-image: url('img/gallery/btn-arrow.svg');"></div>
+                                                </div>
+                                                <video video id="video6"><source src="img/gallery/6.mp4" type="video/mp4"></video>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="trailers" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+            <h2 class="article-title qp-ui" ">Split Trailers</h2>
+            <div class="article-content">
+                <div class="module-list">
+                    <div>
+                        <section class="moduleE1">
+                            <div class="module-body">
+                                <p>The film site <a href="http://www.relatos-salvajes.com/">relatos-salvajes.com</a> features 2 trailers. This interaction splits the audiences attention between the content. This layout would work well if content is minimal.</p>
+
+                                <p>American Made, as we envision, could feature a similar interaction compelling the user to watch and explore video content.</p>
+                            </div>
+                            <div class="figure-group">
+                                <div class="figure-row">
+                                    <figure>
+                                        <div class="media">
+                                            <div class="qp-ui frame qp-ui-video-player qp-ui-video-player-mouse" data-qp-ui="{ 'VideoPlayer': {} }" data-qp-ui-data-id="qp:i">
+                                                <video class="autoplay-video" loop="" preload="auto" tabindex="0"><source src="img/video/Relatos_2.mp4" type="video/mp4"></video>
+                                            </div>
+                                        </div>
+                                        <figcaption>
+                                            <p>Multiple trailer interaction</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="beauty-and-the-beast" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+            <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Interactive 360 Video</h2>
+            <div class="article-content">
+                <div class="module-list">
+                    <div>
+                        <section class="moduleE1">
+                            <div class="module-body">
+                                <p>The Beauty and The Beast teaser site features interactive 3D elements on the landing page.</p>
+                                <p>See the full example at <a href="http://confessyourlove360.com/">confessyourlove360.com</a></p>
+
+                                <p>Interactive 360 video could be done through an <a href="www.omnivirt.com">Omnivirt</a> player with a <a href="https://www.omnivirt.com/360-video-customization/">customized design</a></p>
+                            </div>
+                            <div class="figure-group">
+                                <div class="figure-row">
+                                    <figure>
+                                        <div class="media">
+                                            <div class="qp-ui frame qp-ui-video-player qp-ui-video-player-mouse" data-qp-ui="{ 'VideoPlayer': {} }" data-qp-ui-data-id="qp:j" >
+                                                <video class="autoplay-video" mouseover="" loop="" preload="auto" tabindex="0"><source src="img/video/Confess.mp4" type="video/mp4"></video>
+                                            </div>
+                                        </div>
+                                        <figcaption>
+                                            <p>Interaction with 360 video.</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+</div>
+
+
+<footer class="color-brand-darkest-gray">
+    <div class="footer-grid">
+        <div class="footer-L section-what-is-material color-brand-darkest-gray">&nbsp;</div>
+        <div class="footer-grid-L section-what-is-material color-light-blue">
+            <a class="footer-text" href="landing-pages-character-pages.html">
+                <i class="material-icons arrow-L">arrow_back</i>
+                <span class="direction">Previous</span>
+                <div>Character Page</div>
+            </a>
+        </div>
+        <div class="footer-R section-animation color-brand-dark-gray">&nbsp;</div>
+        <div class="footer-grid-R section-animation color-purple">
+            <a class="footer-text" href="landing-pages-buy-tickets.html">
+                <i class="material-icons arrow-R">arrow_forward</i>
+                <span class="direction">Next</span>
+                <div>Buy Tickets</div>
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="lib/google.js"></script>
+<script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+<script src="js/menu.js"></script>
+<script src=js/gallery/player.js></script> 
+<script src="lib/autoplay-video.js"></script>
+
+</body>
+</html>

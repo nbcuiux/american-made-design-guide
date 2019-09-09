@@ -1,0 +1,210 @@
+@import "variables.less";
+
+@easing: cubic-bezier(.19,1,.22,1);
+@grey: #f4f1ee;
+@box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5),
+inset 1px 1px 0px 0px rgba(0,0,0,0.5);
+
+.transition(@val) {
+  -webkit-transition: @val;
+  -moz-transition: @val;
+  -o-transition: @val;
+  -ms-transition: @val;
+  transition: @val;
+}
+
+.transform(@val) {
+  -webkit-transform: @val;
+  -moz-transform: @val;
+  -ms-transform: @val;
+  transform: @val;
+}
+
+.button-item {
+      width: 100%;
+      height: 180px;
+      background: black;
+      position: relative;
+
+      button {
+            background: transparent;
+            width: 48px; 
+            height: 48px;
+            outline: none;
+            left: ~"calc(50% - 24px)";
+            top: ~"calc(50% - 24px)";
+            opacity: 0.6;
+            position: absolute;
+            border: solid 1px @grey;
+            background: transparent;
+            z-index: 9023; 
+            border-radius: 50%;
+
+            .transform(translateZ(0));
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+            -ms-perspective: 1000;
+            perspective: 1000;
+
+            &#closeButton {
+                  @val: right 0.6s @easing 1.29s,
+                  opacity 0.6s cubic-bezier(0.19,1,.22,1) 0.0s,
+                  transform 0.6s cubic-bezier(0.19,1,.22,1);
+                  .transition(@val);
+
+                  &:before, &:after {
+                        background-color: @grey;
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        left: 9px;
+                        width: 28px;
+                        height: 1px;
+                        font-size: 28px;
+                        text-decoration: none;
+                  }
+
+                  &:before {
+                        .transform(rotateZ(45deg));
+                  }
+
+                  &:after {
+                        .transform(rotateZ(-45deg));
+                  }
+            }
+
+            &#muteButton {
+                  @transition: left 0.6s @easing 1.56s,
+                  opacity 0.6s cubic-bezier(0.19,1,.22,1) 0.0s,
+                  transform 0.6s cubic-bezier(0.19,1,.22,1);
+                  .transition(@transition);
+
+                  background-image: url('img/iconography/muted.svg');
+                  background-repeat: no-repeat;
+                  background-size: 32px;
+                  background-position: center;
+
+            }
+
+            &#unmuteButton {
+                  @transition: left 0.6s @easing 1.56s,
+                  opacity 0.6s cubic-bezier(0.19,1,.22,1) 0.0s,
+                  transform 0.6s cubic-bezier(0.19,1,.22,1);
+                  .transition(@transition);
+
+                  background-image: url('img/iconography/unmuted.svg');
+                  background-repeat: no-repeat;
+                  background-size: 32px;
+                  background-position: center;
+
+            }
+
+            &#facebookButton {
+                  @transition: left 0.6s @easing 1.56s,
+                  opacity 0.6s cubic-bezier(0.19,1,.22,1) 0.0s,
+                  transform 0.6s cubic-bezier(0.19,1,.22,1);
+                  .transition(@transition);
+
+                  background-image: url('img/iconography/facebook.svg');
+                  background-repeat: no-repeat;
+                  background-size: 18px;
+                  background-position: center;
+
+            }
+
+            &#twitterButton {
+                  @transition: left 0.6s @easing 1.56s,
+                  opacity 0.6s cubic-bezier(0.19,1,.22,1) 0.0s,
+                  transform 0.6s cubic-bezier(0.19,1,.22,1);
+                  .transition(@transition);
+
+                  background-image: url('img/iconography/twitter.svg');
+                  background-repeat: no-repeat;
+                  background-size: 28px;
+                  background-position: center;
+
+            }
+
+            &#stopButton {
+                  @transition: left 0.6s @easing 1.38s,
+                  opacity 0.6s cubic-bezier(0.19,1,.22,1) 0.0s,
+                  transform 0.6s cubic-bezier(0.19,1,.22,1);
+                  .transition(@transition);
+
+                  &:after {
+                        content: "";
+                        height: 16px;
+                        width: 6px;
+                        top: 13px;
+                        left: 24px;
+                        border: solid 1px @grey;
+                        position: absolute;
+                        display: block;
+                  }
+                  &:before {
+                        content: "";
+                        height: 16px;
+                        width: 6px;
+                        top: 13px;
+                        left: 14px;
+                        border: solid 1px @grey;
+                        position: absolute;
+                        display: block;
+                  }
+            }
+
+            &#playButton {
+                  @transition: left 0.6s @easing 1.47s,
+                  opacity 0.6s cubic-bezier(0.19,1,.22,1) 0.0s,
+                  transform 0.6s cubic-bezier(0.19,1,.22,1);
+                  .transition(@transition);
+
+                  &:after {
+                        content: "";
+                        height: 16px;
+                        width: 16px;
+                        top: 13px;
+                        left: 11px;
+                        border-right: solid 1px @grey;
+                        border-bottom: solid 1px @grey;
+                        position: absolute;
+                        display: block;
+                        @transform: scale(1.2,0.8) rotateZ(-45deg);
+                        .transform(@transform);
+                  }
+
+                  &:before {
+                        content: "";
+                        color: @grey;
+                        height: 19px;
+                        top: 12px;
+                        left: 18px;
+                        border-left: solid 1px @grey;
+                        position: absolute;
+                        display: block;
+                  }
+            }
+
+
+            &:hover {
+                  opacity: 1;
+                  cursor: pointer;
+                  .transform(scale(1.1));
+            }
+
+            &#closeButton {
+                  padding: 8px;
+                  &:hover {
+                        .transform(rotate(90deg));
+                  }
+            }
+      }
+}
+
+
+
